@@ -1,0 +1,20 @@
+# Normalize all text files to LF on commit, check out as native line endings
+* text=auto
+
+# Force LF for scripts and CI config (must not be CRLF on Linux runners)
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Force CRLF for Windows-only scripts
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Binary — never diff or merge these
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.pkg binary
